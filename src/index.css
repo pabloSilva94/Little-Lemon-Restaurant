@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+select {
+  color: #504C4C;
+}
+
+input::placeholder {
+  color: #504C4C;
+}
+
+/* ////////////////Base  */
+
+nav,
+header section,
+.menu,
+.about,
+footer section,
+.testimonials section,
+form {
+  padding: 15px 13%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+ul.nav_items {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.nav_items_show {
+  display: flex;
+}
+
+ul.nav_items li {
+  display: inline-block;
+}
+
+ul.nav_items li a {
+  color: black;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+ul.nav_items li a:hover {
+  text-decoration: underline solid #495E57;
+}
+
+ul.nav_items_md {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  align-items: start;
+  gap: 3rem;
+  font-size: 24px;
+  padding: 8rem;
+
+
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+  
+}
+
+ul.nav_items_md.open {
+  animation: slideIn 0.5s forwards;
+}
+
+/* ul.nav_items_md.close {
+  animation: slideOut 0.5s forwards;
+} */
+
+ul.nav_items_md li a {
+  color: #495E57;
+  font-weight: 500;
+}
+
+
+.nav_img img {
+  width: 200px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+
+}
+
+.menu-icon img {
+  height: 20px;
+}
+
+.close-icon {
+  position: absolute;
+  z-index: 200;
+  right: 13%;
+  color: #F4CE14;
+  font-size: 30px;
+  transition: all .5s ease-in;
+  display: none;
+}
+
+
+.hide {
+  display: none;
+}
+
+/* /////////////////////////////Header */
+
+
+header section {
+  background-color: #495E57;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+  height: 420px;
+
+  padding-top: 80px;
+}
+
+.banner h1 {
+  font-size: 64px;
+  color: #F4CE14;
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner h3 {
+  font-size: 40px;
+  color: white;
+  margin: 15px 0;
+}
+
+.banner p {
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  max-width: 400px;
+  line-height: 2rem;
+}
+
+.banner button {
+  border-radius: 16px;
+  background-color: #F4CE14;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.banner_img {
+  width: 400px;
+}
+
+.banner_img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* /////////////////////////Menu */
+
+.menu {
+  margin-top: 13rem;
+}
+
+section.menu .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.menu .title h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+section.menu .title button {
+  border-radius: 16px;
+  background-color: #F4CE14;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.menu_items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.menu_items .card {
+  background-color: #EDEFEF;
+  border-radius: 5px;
+}
+
+.card_img {
+  width: 100%;
+  height: 250px;
+}
+
+.card_body,
+.card_footer {
+  padding: 10px 20px;
+}
+
+.card_banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card_banner h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card_banner p {
+  color: #FFA500;
+}
+
+.card_description {
+  color: #504C4C;
+  line-height: 26px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+.card_footer button {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+}
+
+.order_icon {
+  font-size: 25px;
+  margin-top: -2px;
+  padding: 0 15px;
+}
+
+/* ////////////////////////////About */
+.about {
+  display: grid;
+  grid-template-columns: 43% 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 70px 0 10rem 0;
+  gap: 16px;
+}
+
+.about h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.about p {
+  color: #504C4C;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.about_imgs {
+  justify-self: end;
+
+  width: 100%;
+  position: relative;
+  max-width: 70%;
+}
+
+.about_imgs img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  /* position: relative; */
+}
+
+.about_imgs .img2 {
+  position: absolute;
+  top: 5rem;
+  left: -10rem;
+}
+
+/* ////////////////////////////Testimonials */
+.testimonials {
+  background-color: #D9D9D9;
+}
+
+.testimonials section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+  margin: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.testimonials .card {
+  background-color: white;
+  border-radius: 6px;
+  height: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.testimonials .card .rate {
+  color: #F4CE14;
+  margin-bottom: 5px;
+}
+
+.testimonials .card .left {
+  width: 100%;
+}
+
+.testimonials .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-start-start-radius: 6px;
+  border-end-start-radius: 6px;
+}
+
+.testimonials .card .name {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.testimonials .card .right {
+  margin: auto;
+}
+
+.testimonials .comment {
+  color: #504C4C;
+}
+
+/* /////////////////////////Footer */
+
+footer {
+  background-color: #D9D9D9;
+}
+
+footer section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+
+}
+
+footer h3 {
+  color: #000;
+  margin: 0;
+}
+
+footer ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer ul li {
+  color: #504C4C;
+}
+
+footer ul li a {
+  color: #504C4C;
+}
+
+.footer_logo img {
+  width: 100px;
+}
+
+
+/* ////////////////////////Form */
+.reserve {
+  margin: 5rem auto;
+}
+
+.reserve h1 {
+  margin: auto;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+}
+
+form {
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 6px;
+  margin: 20px auto;
+  box-shadow: 0 0 5px #d1d1d1;
+}
+
+.fieldset {
+  display: block;
+  width: 100%;
+
+  margin: 10px 0;
+}
+
+.fieldset label {
+  display: block;
+  font-size: 18px;
+}
+
+.fieldset input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+form button {
+  border-radius: 6px;
+  background-color: #F4CE14;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+/* /////////////////confirm */
+.cofirm .card {
+  margin: 1rem auto;
+  max-width: 50%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.cofirm .card img {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+
+input.invalid,
+select.invalid {
+  border: 1px solid red;
+}
+
+@media (max-width: 992px) {
+
+  nav,
+  header section,
+  .menu,
+  .about,
+  footer section,
+  .testimonials section {
+    padding: 15px 6%;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: auto;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .about {
+    margin-top: 0;
+  }
+
+  .banner h2,
+  .about h2 {
+    font-size: 25px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .testimonials section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  nav,
+  header section,
+  .menu,
+  .about,
+  footer section,
+  .testimonials section {
+    padding: 15px 13%;
+  }
+
+  ul.nav_items_md {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul.nav_items {
+    display: none;
+  }
+
+  header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+    background-image: url("./assets/restauranfood.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    height: 600px;
+    position: relative;
+  }
+
+  header section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Adjust the opacity to make it darker */
+    z-index: 0;
+  }
+
+  .menu {
+    margin-top: 0;
+  }
+
+  section.menu .title h1 {
+    font-size: 26px;
+    margin-top: 30px;
+  }
+
+  section.menu .title button {
+    font-size: 18px;
+  }
+
+  .banner {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .banner p {
+    margin: 30px auto;
+  }
+
+  .banner h3 {
+    font-size: 26px;
+  }
+
+  .banner_img img {
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+  }
+
+  .menu_items {
+    grid-template-columns: 1fr;
+  }
+
+  footer section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .close-icon.open {
+    display: inline-block;
+  }
+
+  .nav_items_show {
+    display: none;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  nav,
+  header section,
+  .menu,
+  .about,
+  footer section,
+  .testimonials section {
+    padding: 15px 6%;
+  }
+
+  .close-icon {
+    right: 6%;
+  } 
+
+  .about {
+    margin: 40px 0;
+  }
+
+  .about_imgs .img1 {
+    display: none;
+  }
+
+  .about_imgs {
+    max-width: 100%;
+  }
+
+  .about_imgs .img2 {
+    position: static;
+  }
+
+  .testimonials section {
+    grid-template-columns: 1fr;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  form {
+    margin: 20px;
+  }
+
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
